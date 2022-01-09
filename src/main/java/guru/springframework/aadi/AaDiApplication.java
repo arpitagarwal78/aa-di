@@ -1,5 +1,6 @@
 package guru.springframework.aadi;
 
+import guru.springframework.aadi.config.AaConfiguration;
 import guru.springframework.aadi.controllers.*;
 import guru.springframework.aadi.datasource.FakeDataSource;
 import guru.springframework.aadi.services.PrototypeBean;
@@ -71,6 +72,12 @@ public class AaDiApplication {
 		System.out.println(fakeDataSource.getUsername());
 		System.out.println(fakeDataSource.getPassword());
 		System.out.println(fakeDataSource.getJdbcUrl());
+
+		System.out.println("_________ CONFIG PROPERTIES BEAN________");
+		AaConfiguration aaConfiguration = ctx.getBean(AaConfiguration.class);
+		System.out.println(aaConfiguration.getUsername());
+		System.out.println(aaConfiguration.getPassword());
+		System.out.println(aaConfiguration.getJdbcUrl());
 
 	}
 
