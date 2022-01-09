@@ -1,0 +1,9 @@
+# this will be used on deleting of application.properties
+spring:
+  profiles:
+    active: EN,qa
+
+guru:
+  username: YmlUserName
+  password: YmlPassword
+  jdbcUrl: YmlUrlForDB
