@@ -1,9 +1,21 @@
 # this will be used on deleting of application.properties
 spring:
   profiles:
-    active: EN,qa
+    active:
+      - EN
+      - prod
 
 guru:
   username: YmlUserName
   password: YmlPassword
   jdbcUrl: YmlUrlForDB
+
+# --- tells it is separate configuration, which is for prod setup above
+---
+spring:
+  profiles: prod
+
+guru:
+  username: YmlProdUserName
+  password: YmlProdPassword
+  jdbcUrl: YmlProdUrlForDB
