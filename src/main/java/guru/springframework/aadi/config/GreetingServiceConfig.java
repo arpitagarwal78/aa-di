@@ -12,7 +12,8 @@ import guru.springframework.aadi.services.PrimaryGreetingService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
-@PropertySource("classpath:datasource.properties") // add properties in class path
+//@PropertySource("classpath:datasource.properties") // add properties in class path
+// if commented it only check for application.properties
 @ImportResource("classpath:aadi-config.xml")
 @Configuration // Spring will look into this class to see configuration
 public class GreetingServiceConfig {
