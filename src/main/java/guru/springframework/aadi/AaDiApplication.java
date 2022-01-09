@@ -1,6 +1,7 @@
 package guru.springframework.aadi;
 
 import guru.springframework.aadi.config.AaConfiguration;
+import guru.springframework.aadi.config.AaConstructorConfig;
 import guru.springframework.aadi.controllers.*;
 import guru.springframework.aadi.datasource.FakeDataSource;
 import guru.springframework.aadi.services.PrototypeBean;
@@ -78,6 +79,12 @@ public class AaDiApplication {
 		System.out.println(aaConfiguration.getUsername());
 		System.out.println(aaConfiguration.getPassword());
 		System.out.println(aaConfiguration.getJdbcUrl());
+
+		System.out.println("_________ Constructor Binding________");
+		AaConstructorConfig aaConstructorConfig = ctx.getBean(AaConstructorConfig.class);
+		System.out.println(aaConstructorConfig.getUsername());
+		System.out.println(aaConstructorConfig.getPassword());
+		System.out.println(aaConstructorConfig.getJdbcUrl());
 
 	}
 
